@@ -1,3 +1,24 @@
 .App {
-  text-align: center;
+  border: 1px solid black; /*testing*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px 100px;
+}
+
+
+
+.image--style {
+  height: 60vh;
+  max-width: 45vw;
+  box-shadow: 0px 7px 15px 2px rgba(0,0,0,0.75);
+-webkit-box-shadow: 0px 7px 15px 2px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 7px 15px 2px rgba(0,0,0,0.75);
+}
+
+.listing--container {
+  border: 1px solid orange; /*testing*/
+  height: 55vh;
+  padding-left: 30px;
 }
