@@ -1,3 +1,15 @@
+:root {
+  --primary-header-color: #A7A7A7;
+  --primary-content-color: #4E4E4E;
+  --accent-content-color: #C9CDD1;
+}
+
+@font-face {
+  font-family: "NunitoSans";
+  src: url('./assets/NunitoSans-Regular.ttf') format('ttf');
+
+}
+
 .App {
   border: 1px solid black; /*testing*/
   display: flex;
@@ -5,6 +17,7 @@
   align-items: center;
   height: 100vh;
   padding: 20px 100px;
+  font-family: NunitoSans;
 }
 
 
@@ -30,6 +43,19 @@
   background-color: white;
   /*Extra*/
   display: flex;
-    justify-content: flex-end;
-    max-width: 50vw;
+  justify-content: flex-end;
+  max-width: 60vw;
+  padding-right: 100px;
+}
+
+@media only screen and (max-width:1200px){
+  .App {
+    flex-direction: column;
+  }
+
+  .image--style {
+    position: initial;
+    height: 50vh;
+    margin-bottom: 10px;
+  }
 }
