@@ -1,5 +1,13 @@
+.todo--container {
+    margin-bottom: 25px;
+}
 
 .todo--container p {
     font-weight: 300;
     color: var(--primary-content-color);
+}
+
+.todo__checkbox--style {
+    margin-right: 10px;
+
 }

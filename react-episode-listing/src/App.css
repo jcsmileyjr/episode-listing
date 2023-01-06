@@ -50,6 +50,7 @@
 
 .listing__content--container p {
   color: var(--primary-header-color);
+  text-transform: capitalize;
 }
 
 @media only screen and (max-width:1200px){
