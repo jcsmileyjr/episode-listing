@@ -1,6 +1,26 @@
 [
     {
         "content": "Trailer",
+        "done": true
+    },
+    {
+        "content": "James Q Quick Origin Story",
+        "done": false
+    },
+    {
+        "content": "Amy Dutton's Origin Story",
+        "done": false
+    },
+    {
+        "content": "Tech Behind the Podcast",
+        "done": false
+    },
+    {
+        "content": "Tech Behind SelfTeach.me",
+        "done": false
+    },
+    {
+        "content": "Freelancing (Part 1)",
         "done": false
     }
 
