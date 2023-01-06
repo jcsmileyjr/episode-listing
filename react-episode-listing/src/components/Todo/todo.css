@@ -1,4 +1,5 @@
 
 .todo--container p {
-    font-weight: bold;
+    font-weight: 300;
+    color: var(--primary-content-color);
 }

@@ -48,6 +48,10 @@
   padding-right: 100px;
 }
 
+.listing__content--container p {
+  color: var(--primary-header-color);
+}
+
 @media only screen and (max-width:1200px){
   .App {
     flex-direction: column;
