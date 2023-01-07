@@ -11,7 +11,24 @@ import Todo from "./components/Todo/Todo";
  */
 function App() {
   const [todos, setTodos] = useState(Data);
-  console.log(todos);
+
+  /**
+   * Function to update the scratch off a todo when the checkbox is checked
+   */
+  const scratchOffTodo = (id) => {
+    setTodos(todos.map((todo) => {
+      if(todo.id === id){
+        if(todo.done){
+          todo.done = false;
+        }else{
+          todo.done = true;
+        }
+        return todo;
+      }else{
+        return todo;
+      }
+    }))
+  }
   return (
     <div className="App">
       <img src={CompressFM} alt="podcast cover" className="image--style" />
@@ -22,7 +39,7 @@ function App() {
           <p>Listen to all the COMPRESSED.FM episodes</p>
           {
             todos.map((todo, index) => (
-              <Todo done={todo.done} data={todo.content} numbering={index} key={index} />
+              <Todo scratch={() => scratchOffTodo(todo.id)}  data={todo} numbering={index} key={index} />
             ))
           }
         </div>
