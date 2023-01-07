@@ -22,7 +22,7 @@ function App() {
           <p>Listen to all the COMPRESSED.FM episodes</p>
           {
             todos.map((todo, index) => (
-              <Todo data={todo.content} numbering={index} key={index} />
+              <Todo done={todo.done} data={todo.content} numbering={index} key={index} />
             ))
           }
         </div>
