@@ -53,6 +53,14 @@
   text-transform: capitalize;
 }
 
+.listing__checkall--conatiner {
+}
+
+.listing__checkall--style {
+  margin-right: 10px;
+  margin-bottom: 20px;
+}
+
 @media only screen and (max-width:1200px){
   .App {
     flex-direction: column;
