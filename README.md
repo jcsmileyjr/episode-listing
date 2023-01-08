@@ -9,7 +9,7 @@ A future goal is to rebuild the project with TypeScript.
 
 ### GIFs of app in use
 
-![GIF of in use](/)
+![GIF of in use](/react-episode-listing/src/assets/episode-listing-1.gif)
 
 ### How to run in development(Windows with NPM)
 1. Clone the repo.
