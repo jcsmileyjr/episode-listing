@@ -8,6 +8,7 @@ const Todo = ({ data, numbering, scratch }) => {
         type="checkbox"
         className="todo__checkbox--style"
         onChange={scratch}
+        checked={data.done}
       />
       <label
         htmlFor={`check-${numbering}`}
