@@ -33,3 +33,5 @@ A future goal is to rebuild the project with TypeScript.
 ### Resources
 - https://chrisdevcode.hashnode.dev/how-to-display-json-data-on-an-html-page-using-vanilla-javascript
 - https://gomakethings.com/five-more-ways-to-inject-html-into-the-dom-with-vanilla-javascript/
+- https://gomakethings.com/listening-for-click-events-with-vanilla-javascript/
+- https://developer.mozilla.org/en-US/docs/Web/API/Node/removeChild

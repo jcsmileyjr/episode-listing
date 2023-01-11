@@ -16,7 +16,6 @@ function fetchData() {
     fetch('../react-episode-listing/src/development-data/data.json')
     .then((res) => res.json())
     .then((data) => {
-        console.log(data)
         arrayOfTodos = data;
         displayTodos(data);
     })
@@ -32,7 +31,7 @@ const displayTodos = (todos) => {
         // Create the checkbox input
         let todoCheckbox = document.createElement('input');
         todoCheckbox.type = 'checkbox';
-        todoCheckbox.id = `check- ${todo.id}`;
+        todoCheckbox.id = todo.id;
         todoCheckbox.class = "todo__checkbox--style";
         todoCheckbox.checked = todo.done;
 
@@ -52,3 +51,40 @@ const displayTodos = (todos) => {
         todoList.append(todoContainer)
     })
 }
+
+/**
+ * Function to update the list of TODOs when the user clicks on a todo checkbox
+ * @param {string} key 
+ */
+const scratchOffTodo = (key) => {
+    const id = Number(key); // Convert the key from a String type to a Number type
+    updateArrayOfTodos = arrayOfTodos.map((todo) => {
+        if(todo.id === id){
+          if(todo.done){
+            todo.done = false;
+          }else{
+            todo.done = true;
+          }
+          return todo;
+        }else{
+          return todo;
+        }
+      });
+
+    // Remove the current todos and create a new list
+    removeTodos()
+    displayTodos(updateArrayOfTodos);
+}
+
+// function to remove the current list of TODOs to update with a new list
+const removeTodos = () => {
+    while(todoList.firstChild){
+        todoList.removeChild(todoList.firstChild);
+    }
+}
+
+// Listen for any TODO change to update the list of TODOs
+document.addEventListener('change',function (event){
+    let todoId = event.target.value.id;
+    scratchOffTodo(event.target.id)
+}, false)
