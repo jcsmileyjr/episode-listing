@@ -53,12 +53,32 @@
     text-transform: capitalize;
   }
   
-  .listing__checkall--conatiner {
-  }
-  
   .listing__checkall--style {
     margin-right: 10px;
     margin-bottom: 20px;
+  }
+
+  #todoList {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .todoContainer--style{
+    margin-bottom: 25px;
+  }
+
+    .todo--container p {
+        font-weight: 300;
+        color: var(--primary-content-color);
+    }
+
+    .todo__checkbox--style {
+        margin-right: 10px;
+
+    }
+
+  .scratch-off {
+    text-decoration: line-through;
   }
   
   @media only screen and (max-width:1200px){

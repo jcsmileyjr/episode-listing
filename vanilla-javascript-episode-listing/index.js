@@ -1,3 +1,6 @@
+let arrayOfTodos = [];
+let todoList = document.getElementById("todoList")
+
 /**
  * When the page loads, display the todo items
  * 1. Go get array of objects
@@ -15,13 +18,31 @@ function fetchData() {
     .then((res) => res.json())
     .then((data) => {
         console.log(data)
-        let output = '<h2 class="mb-4">Countries</h2>'
-        data.forEach(function (item) {
-        output += `
-        <ul class="list-group mb-3">
-          <li class="list-group-item">Country: ${item.Country}</li>
-          <li class="list-group-item">CODE: ${item.ISO2}</li>
-        </ul>
-      `
-    })})
+        arrayOfTodos = data;
+        displayTodos(data);
+    })
+}
+
+const displayTodos = (todos) => {
+    todos.forEach((todo) => {
+        
+        let todoCheckbox = document.createElement('input');
+        todoCheckbox.type = 'checkbox';
+        todoCheckbox.id = `check- ${todo.id}`;
+        todoCheckbox.class = "todo__checkbox--style";
+        todoCheckbox.checked = todo.done;
+
+        let todoLabel = document.createElement('label');
+        todoLabel.for = `check- ${todo.id}`;
+        todoLabel.className = `${todo.done ? "scratch-off" : ""}`;
+        todoLabel.textContent = `${todo.id + 1} || ${todo.content}`;
+
+        let todoContainer = document.createElement('div');
+        todoContainer.className = "todoContainer--style";
+
+        todoContainer.append(todoCheckbox);
+        todoContainer.append(todoLabel);
+        todoList.append(todoContainer)
+    })
+
 }

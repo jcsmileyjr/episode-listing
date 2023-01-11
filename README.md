@@ -28,3 +28,8 @@ A future goal is to rebuild the project with TypeScript.
 - Website - [JC Smiley](https://www.jcsmileyjr.com)
 - Twitter - [@JCSmiley4](https://twitter.com/JCSmiley4)
 - LinkedIn - [jcsmileyjr](https://www.linkedin.com/in/jcsmileyjr/)
+
+
+### Resources
+- https://chrisdevcode.hashnode.dev/how-to-display-json-data-on-an-html-page-using-vanilla-javascript
+- https://gomakethings.com/five-more-ways-to-inject-html-into-the-dom-with-vanilla-javascript/
