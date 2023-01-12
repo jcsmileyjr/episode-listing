@@ -58,7 +58,7 @@ const displayTodos = (todos) => {
  */
 const scratchOffTodo = (key) => {
     const id = Number(key); // Convert the key from a String type to a Number type
-    updateArrayOfTodos = arrayOfTodos.map((todo) => {
+    let updateArrayOfTodos = arrayOfTodos.map((todo) => {
         if(todo.id === id){
           if(todo.done){
             todo.done = false;
@@ -74,6 +74,34 @@ const scratchOffTodo = (key) => {
     // Remove the current todos and create a new list
     removeTodos()
     displayTodos(updateArrayOfTodos);
+    arrayOfTodos = updateArrayOfTodos;
+}
+
+let allChecked = false // Global variable use to monitor the change in the checkall checkbox
+
+/**
+ * Function to update all todos when the checkall checkbox is checked/unchecked
+ */
+const checkall = () => {
+    let updateArrayOfTodos = [];
+    if(!allChecked){
+        updateArrayOfTodos = arrayOfTodos.map((todo) => {
+            todo.done = true;
+            allChecked = true;
+            return todo;
+        })
+    }else{
+        updateArrayOfTodos = arrayOfTodos.map((todo) => {
+            todo.done = false;
+            allChecked = false;
+            return todo;
+        })
+    }
+
+    // Remove the current todos and create a new list
+    removeTodos()
+    displayTodos(updateArrayOfTodos);
+    arrayOfTodos = updateArrayOfTodos;
 }
 
 // function to remove the current list of TODOs to update with a new list
@@ -85,5 +113,9 @@ const removeTodos = () => {
 
 // Listen for any TODO change to update the list of TODOs
 document.addEventListener('change',function (event){
-    scratchOffTodo(event.target.id)
+    if(event.target.id !== 'checkall'){
+        scratchOffTodo(event.target.id)
+    }else{
+        checkall();
+    }
 }, false)
