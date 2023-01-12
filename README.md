@@ -5,17 +5,24 @@ The challenge was to build a todo style list of the podcast's episodes that allo
 1. Scratch on and off episodes that was listened to.
 2. Include a "check all" box that checked all todos off
 
+A secondary challenge was to do this in multiple languages. So far, I have iterated with React and vanilla JavaScript. 
+
 A future goal is to rebuild the project with TypeScript. 
 
 ### GIFs of app in use
 
 ![GIF of in use](/react-episode-listing/src/assets/episode-listing-1.gif)
 
-### How to run in development(Windows with NPM)
+### How to run the React iteration in development(Windows with NPM)
 1. Clone the repo.
 2. Open a terminal and navigate directory "react-episode-listing"
 3. Type npm install
 4. When finish, type npm start
+
+### How to run the vanilla JavaScript iteration in development
+1. clone the repo.
+2. Open a terminal and navigate directory "vanilla-javascript-episode-listing" 
+3. Use your computer file director to open the index.html file with your browser of choice. 
 
 ### Built with
 - React
