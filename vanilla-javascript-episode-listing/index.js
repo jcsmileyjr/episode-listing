@@ -85,6 +85,5 @@ const removeTodos = () => {
 
 // Listen for any TODO change to update the list of TODOs
 document.addEventListener('change',function (event){
-    let todoId = event.target.value.id;
     scratchOffTodo(event.target.id)
 }, false)
